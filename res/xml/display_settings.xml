@@ -88,6 +88,13 @@
             android:summary="@string/wake_when_plugged_or_unplugged_summary"
             android:defaultValue="false" />
 
+
+        <PreferenceScreen
+            android:id="@+id/animations"
+            android:title="@string/title_animation_controls"
+            android:summary="@string/header_summary_animation"
+            android:fragment="com.android.settings.cyanogenmod.fragments.AnimationControls" />
+
         <CheckBoxPreference
             android:key="double_tap_wake_gesture"
             android:title="@string/double_tap_to_wake_title"
