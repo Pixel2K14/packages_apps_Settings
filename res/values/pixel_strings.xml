@@ -1009,4 +1009,7 @@
     <string name="app_moving_reboot_now_button">Reboot now</string>
     <string name="app_moving_reboot_later_button">Reboot later</string>
 
+    <!-- Quick settings panel  -->
+    <string name="title_tile_music">Music</string>
+
 </resources>
