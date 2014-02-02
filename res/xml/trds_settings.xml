@@ -15,13 +15,13 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/theme_settings_title">
+        android:title="@string/trds_settings_title">
 
     <ListPreference
-        android:key="pref_theme_auto_mode"
-        android:entries="@array/theme_auto_mode_entries"
-        android:entryValues="@array/theme_auto_mode_values"
-        android:title="@string/theme_auto_mode_title"
-        android:dialogTitle="@string/theme_auto_mode_title" />
+        android:key="pref_trds_auto_mode"
+        android:entries="@array/trds_auto_mode_entries"
+        android:entryValues="@array/trds_auto_mode_values"
+        android:title="@string/trds_auto_mode_title"
+        android:dialogTitle="@string/trds_auto_mode_title" />
 
 </PreferenceScreen>
