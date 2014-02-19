@@ -6,6 +6,11 @@
     <string name="pixel_version">PixelROM Version</string>
     <string name="pixel_version_default">Unknown</string>
 
+    <!-- Restart SystemUI -->
+    <string name="general_settings_title">General settings</string>
+    <string name="general_settings_style_title">General options</string>
+    <string name="restart_systemui">Restart SystemUI</string>
+
     <!-- Display : Animation options -->
     <string name="screen_and_animations_title">Animation Control</string>
     <string name="display_category_animation_options_title">Animation Control Options</string>
@@ -799,5 +804,6 @@
     <string name="progressbar_linear">Linear</string>
     <string name="progressbar_acceleratedecelerate">AccelerateDecelerate</string>
     <string name="progressbar_decelerate">Decelerate</string>
+    <string name="progressbar_reset_message">Reset progress bar style to default?</string>
 
 </resources>
