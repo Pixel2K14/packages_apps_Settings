@@ -572,4 +572,7 @@
     <string name="sizer_message_filefail">Failed to create profile.</string>
     <string name="sizer_message_noselect">Nothing selected.</string>
 
+    <!-- allow multiuser -->
+    <string name="multiuser_preference_title">Multiuser support</string>
+
 </resources>
