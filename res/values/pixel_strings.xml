@@ -575,4 +575,7 @@
     <!-- allow multiuser -->
     <string name="multiuser_preference_title">Multiuser support</string>
 
+    <!-- Lockscreen battery ring -->
+    <string name="battery_around_lockscreen_ring">Battery around unlock ring</string>
+
 </resources>
