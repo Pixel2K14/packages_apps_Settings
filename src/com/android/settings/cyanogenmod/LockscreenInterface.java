@@ -34,6 +34,8 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
+import com.android.settings.pixel.SeekBarPreferenceCHOS;
+
 public class LockscreenInterface extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
@@ -49,6 +51,8 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private static final String KEY_LOCKSCREEN_TARGETS = "lockscreen_targets";
     private static final String LOCK_BEFORE_UNLOCK = "lock_before_unlock";
     private static final String KEY_DISABLE_FRAME = "lockscreen_disable_frame";
+    private static final String KEY_SEE_THROUGH = "see_through";
+    private static final String KEY_BLUR_RADIUS = "lockscreen_blur_radius";
 
     private CheckBoxPreference mEnableKeyguardWidgets;
     private CheckBoxPreference mEnableCameraWidget;
@@ -58,6 +62,8 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private Preference mLockscreenTargets;
     private CheckBoxPreference mLockBeforeUnlock;
     private CheckBoxPreference mDisableFrame;
+    private CheckBoxPreference mSeeThrough;
+    private SeekBarPreferenceCHOS mBlurRadius;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
     private LockPatternUtils mLockUtils;
@@ -108,7 +114,18 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
 
         // Lock before Unlock
         mLockBeforeUnlock = (CheckBoxPreference) findPreference(LOCK_BEFORE_UNLOCK);
-        
+
+        // Lockscreen Blur
+        mSeeThrough = (CheckBoxPreference) findPreference(KEY_SEE_THROUGH);
+
+        // Blur radius
+        mBlurRadius = (SeekBarPreferenceCHOS) findPreference(KEY_BLUR_RADIUS);
+        if (mBlurRadius != null) {
+            mBlurRadius.setValue(Settings.System.getInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_BLUR_RADIUS, 12));
+            mBlurRadius.setOnPreferenceChangeListener(this);
+        }
+
         // Enable or disable camera widget based on device and policy
         if (Camera.getNumberOfCameras() == 0) {
             widgetsCategory.removePreference(mEnableCameraWidget);
@@ -220,6 +237,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         } else if (preference == mLockBeforeUnlock) {
             Settings.Secure.putInt(getContentResolver(), Settings.Secure.LOCK_BEFORE_UNLOCK,
                     mLockBeforeUnlock.isChecked() ? 1 : 0);
+	} else if (preference == mSeeThrough) {
+            Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_SEE_THROUGH,
+                    mSeeThrough.isChecked() ? 1 : 0);
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -246,6 +266,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_WIDGET_FRAME_ENABLED,
                     (Boolean) objValue ? 1 : 0);
+        } else if (preference == mBlurRadius) {
+                    Settings.System.putInt(getContentResolver(),
+            Settings.System.LOCKSCREEN_BLUR_RADIUS, (Integer) objValue);
             return true;
         }
 
