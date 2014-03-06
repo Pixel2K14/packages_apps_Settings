@@ -715,4 +715,11 @@
     <string name="power_menu_onthego_title">On-The-Go Mode</string>
     <string name="title_tile_onthego">On-The-Go</string>
 
+    <!-- Network usage stats -->
+    <string name="status_bar_network_cat">Network traffic meter</string>
+    <string name="status_bar_network_header">Network traffic meter</string>
+    <string name="status_bar_network_title">Network traffic</string>
+    <string name="status_bar_show_network_stats_title">Show network speeds</string>
+    <string name="status_bar_network_stats_update_title">Update frequency</string>
+
 </resources>
