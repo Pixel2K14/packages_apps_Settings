@@ -711,4 +711,7 @@
     <string name="app_circle_bar_included_apps_summary">Apps will show in app sidebar</string>
     <string name="category_app_circle_bar_title">App launcher</string>
 
+    <!-- On-The-Go -->
+    <string name="power_menu_onthego_title">On-The-Go Mode</string>
+
 </resources>
