@@ -339,6 +339,13 @@
             android:title="@string/kill_app_longpress_back"
             android:summary="@string/kill_app_longpress_back_summary"/>
 
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+            android:key="disable_fc_notifications"
+            android:title="@string/disable_fc_notifications_title"
+            android:summary="@string/disable_fc_notifications_summary" />
+
+    </PreferenceCategory>
+
         <ListPreference
             android:key="kill_app_longpress_timeout"
             android:defaultValue="2000"
