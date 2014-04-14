@@ -42,6 +42,9 @@
     <string name="halo_size_gigantic">Gigantic</string>
     <string name="halo_size_monster">Monster</string>
 
+    <string name="halo_color_title">Halo color</string>
+    <string name="halo_color_summary">Defines what color the Halo bubble is</string>
+
     <string name="halo_notification_count_title">Notification count</string>
     <string name="halo_notification_count_summary">Display notification counts on Halo</string>
     <string name="halo_notification_count_none">None</string>
