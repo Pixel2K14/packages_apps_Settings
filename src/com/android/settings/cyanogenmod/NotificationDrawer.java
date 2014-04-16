@@ -29,7 +29,7 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import android.preference.RingtonePreference;
 
-import com.android.internal.util.crdroid.DeviceUtils;
+import com.android.internal.util.pixel.DeviceUtils;
 
 public class NotificationDrawer extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
