@@ -42,7 +42,7 @@
     <!-- App sidebar -->
     <PreferenceScreen
         android:key="app_sidebar"
-        android:fragment="com.android.settings.crdroid.AppSidebar"
+        android:fragment="com.android.settings.pixel.AppSidebar"
         android:title="@string/app_sidebar_title"/>
 
     <PreferenceCategory
