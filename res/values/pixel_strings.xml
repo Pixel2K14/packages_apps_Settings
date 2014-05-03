@@ -643,4 +643,7 @@
     <!-- CPUFreq Tile -->
     <string name="title_tile_cpufreq">CPUFreq</string>
 
+    <!-- Fast Charge Tile -->
+    <string name="title_tile_fast_charge">Fast charge</string>
+
 </resources>
