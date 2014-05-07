@@ -65,22 +65,6 @@
             android:fragment="com.android.settings.pixel.LockscreenNotifications"
             android:summary="@string/notifications_on_lockscreen_summary" />
 
-        <CheckBoxPreference
-            android:key="see_through"
-            android:title="@string/see_through_title"
-            android:summary="@string/see_through_summary" />
-
-        <com.android.settings.pixel.SeekBarPreferenceCHOS
-            android:key="lockscreen_blur_radius"
-            android:title="@string/blur_radius_title"
-            android:summary="@string/blur_radius_summary"
-            android:max="25"
-            settings:minimun="0"
-            settings:unitsLeft=""
-            settings:unitsRight=""
-            android:persistent="false"
-            android:dependency="see_through" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
