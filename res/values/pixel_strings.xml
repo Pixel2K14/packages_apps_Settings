@@ -640,4 +640,7 @@
     <string name="flip_qs_tiles_title">Flip tiles</string>
     <string name="flip_qs_tiles_summary">Flips the tiles on touch</string>
 
+    <!-- CPUFreq Tile -->
+    <string name="title_tile_cpufreq">CPUFreq</string>
+
 </resources>
