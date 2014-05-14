@@ -95,10 +95,6 @@ public class Halo extends SettingsPreferenceFragment
         mHaloColor = (ColorPickerPreference) prefSet.findPreference(KEY_HALO_COLOR);
         mHaloColor.setOnPreferenceChangeListener(this);
 
-        mHaloNinja = (CheckBoxPreference) prefSet.findPreference(KEY_HALO_NINJA);
-        mHaloNinja.setChecked(Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.HALO_NINJA, 0) == 1);
-
         mHaloMsgBox = (CheckBoxPreference) prefSet.findPreference(KEY_HALO_MSGBOX);
         mHaloMsgBox.setChecked(Settings.System.getInt(mContext.getContentResolver(),
                 Settings.System.HALO_MSGBOX, 1) == 1);
