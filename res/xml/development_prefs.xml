@@ -344,8 +344,6 @@
             android:title="@string/disable_fc_notifications_title"
             android:summary="@string/disable_fc_notifications_summary" />
 
-    </PreferenceCategory>
-
         <ListPreference
             android:key="kill_app_longpress_timeout"
             android:defaultValue="2000"
