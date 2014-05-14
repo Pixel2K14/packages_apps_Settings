@@ -586,10 +586,6 @@
     <string name="haptic_qs_tiles_title">Vibrate on touch</string>
     <string name="haptic_qs_tiles_summary">Vibrate when touching tiles</string>
 
-    <!-- Lock screen battery ring -->
-    <string name="battery_around_ring_title">Battery around ring</string>
-    <string name="battery_around_ring_summary">Display battery level around unlock ring</string>
-
     <!-- Disable FC Notifications -->
     <string name="disable_fc_notifications_title">Disable FC Notifications</string>
     <string name="disable_fc_notifications_summary">This will hide all force close notifications</string>

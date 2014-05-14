@@ -40,7 +40,6 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private static final String LOCKSCREEN_GENERAL_CATEGORY = "lockscreen_general_category";
     private static final String LOCKSCREEN_WIDGETS_CATEGORY = "lockscreen_widgets_category";
     private static final String KEY_BATTERY_STATUS = "lockscreen_battery_status";
-    private static final String KEY_BATTERY_AROUND_RING = "battery_around_ring";
     private static final String KEY_LOCKSCREEN_BUTTONS = "lockscreen_buttons";
     private static final String KEY_ENABLE_WIDGETS = "keyguard_enable_widgets";
     private static final String KEY_LOCK_CLOCK = "lock_clock";
@@ -56,7 +55,6 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private CheckBoxPreference mEnableModLock;
     private CheckBoxPreference mEnableMaximizeWidgets;
     private ListPreference mBatteryStatus;
-    private CheckBoxPreference mLockRingBattery;
     private Preference mLockscreenTargets;
     private CheckBoxPreference mLockBeforeUnlock;
     private CheckBoxPreference mDisableFrame;
@@ -89,13 +87,6 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         mEnableModLock = (CheckBoxPreference) findPreference(KEY_LOCKSCREEN_MODLOCK_ENABLED);
         if (mEnableModLock != null) {
             mEnableModLock.setOnPreferenceChangeListener(this);
-        }
-
-        mLockRingBattery = (CheckBoxPreference) prefs
-                 .findPreference(KEY_BATTERY_AROUND_RING);
-        if (mLockRingBattery != null) {
-            mLockRingBattery.setChecked(Settings.System.getInt(getContentResolver(),
-                    Settings.System.BATTERY_AROUND_LOCKSCREEN_RING, 0) == 1);
         }
 
         // Keyguard widget frame
@@ -242,11 +233,6 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
             int index = mBatteryStatus.findIndexOfValue((String) objValue);
             Settings.System.putInt(cr, Settings.System.LOCKSCREEN_BATTERY_VISIBILITY, value);
             mBatteryStatus.setSummary(mBatteryStatus.getEntries()[index]);
-            return true;
-        } else if (preference == mLockRingBattery) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.BATTERY_AROUND_LOCKSCREEN_RING,
-                    mLockRingBattery.isChecked() ? 1 : 0);
             return true;
         } else if (preference == mEnableModLock) {
             boolean value = (Boolean) objValue;
