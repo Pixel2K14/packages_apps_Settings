@@ -44,6 +44,12 @@
         android:key="app_sidebar"
         android:fragment="com.android.settings.pixel.AppSidebar"
         android:title="@string/app_sidebar_title"/>
+        
+    <!-- System App Remover -->
+    <PreferenceScreen
+        android:id="@+id/system_app_remover"
+        android:fragment="com.android.settings.pixel.SystemappRemover"
+        android:title="@string/system_app_remover" />
 
     <PreferenceCategory
             android:key="expanded_desktop_category"
@@ -140,10 +146,5 @@
             android:defaultValue="true" />
 
     </PreferenceCategory>
-
-    <PreferenceScreen
-        android:id="@+id/system_app_remover"
-        android:fragment="com.android.settings.pixel.SystemappRemover"
-        android:title="@string/system_app_remover" />
 
 </PreferenceScreen>
