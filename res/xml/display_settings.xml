@@ -110,8 +110,6 @@
             android:summary="@string/animation_controls_summary"
             android:fragment="com.android.settings.pixel.AnimationControls" />
 
-    </PreferenceCategory>
-
         <PreferenceCategory
             android:key="lights_prefs"
             android:title="@string/lights_category_title">
