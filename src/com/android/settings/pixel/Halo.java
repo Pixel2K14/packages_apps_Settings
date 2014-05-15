@@ -91,7 +91,7 @@ public class Halo extends SettingsPreferenceFragment
             // So what
         }
         mHaloSize.setOnPreferenceChangeListener(this);
-        
+
         mHaloColor = (ColorPickerPreference) prefSet.findPreference(KEY_HALO_COLOR);
         mHaloColor.setOnPreferenceChangeListener(this);
 
