@@ -44,7 +44,7 @@ public class TRDSSettings extends SettingsPreferenceFragment {
         "pref_theme_auto_mode";
 
     private ListPreference mThemeAutoMode;
-    private ThemeEnabler mThemeEnabler;
+    private TRDSEnabler mTRDSEnabler;
 
     private int mCurrentState = 0;
 
@@ -96,23 +96,23 @@ public class TRDSSettings extends SettingsPreferenceFragment {
                         Gravity.CENTER_VERTICAL | Gravity.END));
             }
         }
-        mThemeEnabler = new ThemeEnabler(activity, actionBarSwitch);
+        mTRDSEnabler = new TRDSEnabler(activity, actionBarSwitch);
 
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        if (mThemeEnabler != null) {
-            mThemeEnabler.resume();
+        if (mTRDSEnabler != null) {
+            mTRDSEnabler.resume();
         }
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        if (mThemeEnabler != null) {
-            mThemeEnabler.pause();
+        if (mTRDSEnabler != null) {
+            mTRDSEnabler.pause();
         }
     }
 
@@ -120,9 +120,9 @@ public class TRDSSettings extends SettingsPreferenceFragment {
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
 
-        if (newConfig.uiThemeMode != mCurrentState && mThemeEnabler != null) {
+        if (newConfig.uiThemeMode != mCurrentState && mTRDSEnabler != null) {
             mCurrentState = newConfig.uiThemeMode;
-            mThemeEnabler.setSwitchState();
+            mTRDSEnabler.setSwitchState();
         }
     }
 

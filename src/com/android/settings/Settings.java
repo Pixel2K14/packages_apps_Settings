@@ -879,7 +879,7 @@ public class Settings extends PreferenceActivity
         private final VoiceWakeupEnabler mVoiceWakeupEnabler;
         private AuthenticatorHelper mAuthHelper;
         private DevicePolicyManager mDevicePolicyManager;
-        public static ThemeEnabler mThemeEnabler;
+        public static TRDSEnabler mTRDSEnabler;
 
         private static class HeaderViewHolder {
             ImageView icon;
@@ -952,7 +952,7 @@ public class Settings extends PreferenceActivity
             mProfileEnabler = new ProfileEnabler(context, new Switch(context));
             mLocationEnabler = new LocationEnabler(context, new Switch(context));
             mVoiceWakeupEnabler = new VoiceWakeupEnabler(context, new Switch(context));
-            mThemeEnabler = new ThemeEnabler(context, new Switch(context));
+            mTRDSEnabler = new TRDSEnabler(context, new Switch(context));
             mDevicePolicyManager = dpm;
         }
 
@@ -1033,7 +1033,7 @@ public class Settings extends PreferenceActivity
                     } else if (header.id == R.id.voice_wakeup_settings) {
                         mVoiceWakeupEnabler.setSwitch(holder.switch_);
                     } else if (header.id == R.id.trds_settings) {
-                        mThemeEnabler.setSwitch(holder.switch_);
+                        mTRDSEnabler.setSwitch(holder.switch_);
                     }
                     updateCommonHeaderView(header, holder);
                     break;
@@ -1111,7 +1111,7 @@ public class Settings extends PreferenceActivity
             mProfileEnabler.resume();
             mLocationEnabler.resume();
             mVoiceWakeupEnabler.resume();
-            mThemeEnabler.resume();
+            mTRDSEnabler.resume();
         }
 
         public void pause() {
@@ -1121,7 +1121,7 @@ public class Settings extends PreferenceActivity
             mProfileEnabler.pause();
             mLocationEnabler.pause();
             mVoiceWakeupEnabler.pause();
-            mThemeEnabler.resume();
+            mTRDSEnabler.resume();
         }
     }
 
@@ -1199,9 +1199,9 @@ public class Settings extends PreferenceActivity
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
 
-        if (newConfig.uiThemeMode != mCurrentState && HeaderAdapter.mThemeEnabler != null) {
+        if (newConfig.uiThemeMode != mCurrentState && HeaderAdapter.mTRDSEnabler != null) {
             mCurrentState = newConfig.uiThemeMode;
-            HeaderAdapter.mThemeEnabler.setSwitchState();
+            HeaderAdapter.mTRDSEnabler.setSwitchState();
         }
     }
 
