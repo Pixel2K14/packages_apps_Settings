@@ -51,6 +51,12 @@
         android:fragment="com.android.settings.pixel.SystemappRemover"
         android:title="@string/system_app_remover" />
 
+    <!-- Gesture anywhere -->
+    <PreferenceScreen
+        android:key="gesture_anywhere"
+        android:fragment="com.android.settings.chameleonos.labs.gestureanywhere.GestureAnywhereSettings"
+        android:title="@string/gesture_anywhere_title" />
+
     <PreferenceCategory
             android:key="expanded_desktop_category"
             android:title="@string/power_menu_expanded_desktop" >
