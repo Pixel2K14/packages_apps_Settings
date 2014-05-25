@@ -113,7 +113,7 @@ import com.android.settings.wifi.AdvancedWifiSettings;
 import com.android.settings.wifi.WifiEnabler;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
-import com.android.settings.pixel.themes.TRDSEnabler;
+import com.android.settings.crdroid.themes.ThemeEnabler;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -601,7 +601,8 @@ public class Settings extends PreferenceActivity
             Header header = target.get(i);
             // Ids are integers, so downcasting
             int id = (int) header.id;
-            if (id == R.id.operator_settings || id == R.id.manufacturer_settings) {
+            if (id == R.id.operator_settings || id == R.id.manufacturer_settings ||
+                    id == R.id.advanced_settings) {
                 Utils.updateHeaderToSpecificActivityFromMetaDataOrRemove(this, target, header);
             } else if (id == R.id.wifi_settings) {
                 // Remove WiFi Settings if WiFi service is not available.
@@ -883,7 +884,7 @@ public class Settings extends PreferenceActivity
         private final VoiceWakeupEnabler mVoiceWakeupEnabler;
         private AuthenticatorHelper mAuthHelper;
         private DevicePolicyManager mDevicePolicyManager;
-        public static TRDSEnabler mTRDSEnabler;
+        public static ThemeEnabler mThemeEnabler;
 
         private static class HeaderViewHolder {
             ImageView icon;
@@ -898,7 +899,7 @@ public class Settings extends PreferenceActivity
 
         static int getHeaderType(Header header) {
             if (header.fragment == null && header.intent == null
-                    && header.id != R.id.trds_settings) {
+                    && header.id != R.id.theme_settings_trds) {
                 return HEADER_TYPE_CATEGORY;
             } else if (header.id == R.id.wifi_settings
                     || header.id == R.id.bluetooth_settings
@@ -906,7 +907,7 @@ public class Settings extends PreferenceActivity
                     || header.id == R.id.profiles_settings
                     || header.id == R.id.voice_wakeup_settings
                     || header.id == R.id.location_settings
-                    || header.id == R.id.trds_settings) {
+                    || header.id == R.id.theme_settings_trds) {
                 return HEADER_TYPE_SWITCH;
             } else if (header.id == R.id.security_settings) {
                 return HEADER_TYPE_BUTTON;
@@ -956,7 +957,7 @@ public class Settings extends PreferenceActivity
             mProfileEnabler = new ProfileEnabler(context, new Switch(context));
             mLocationEnabler = new LocationEnabler(context, new Switch(context));
             mVoiceWakeupEnabler = new VoiceWakeupEnabler(context, new Switch(context));
-            mTRDSEnabler = new TRDSEnabler(context, new Switch(context));
+            mThemeEnabler = new ThemeEnabler(context, new Switch(context));
             mDevicePolicyManager = dpm;
         }
 
@@ -1036,8 +1037,8 @@ public class Settings extends PreferenceActivity
                         mLocationEnabler.setSwitch(holder.switch_);
                     } else if (header.id == R.id.voice_wakeup_settings) {
                         mVoiceWakeupEnabler.setSwitch(holder.switch_);
-                    } else if (header.id == R.id.trds_settings) {
-                        mTRDSEnabler.setSwitch(holder.switch_);
+                    } else if (header.id == R.id.theme_settings_trds) {
+                        mThemeEnabler.setSwitch(holder.switch_);
                     }
                     updateCommonHeaderView(header, holder);
                     break;
@@ -1115,7 +1116,7 @@ public class Settings extends PreferenceActivity
             mProfileEnabler.resume();
             mLocationEnabler.resume();
             mVoiceWakeupEnabler.resume();
-            mTRDSEnabler.resume();
+            mThemeEnabler.resume();
         }
 
         public void pause() {
@@ -1125,7 +1126,7 @@ public class Settings extends PreferenceActivity
             mProfileEnabler.pause();
             mLocationEnabler.pause();
             mVoiceWakeupEnabler.pause();
-            mTRDSEnabler.resume();
+            mThemeEnabler.resume();
         }
     }
 
@@ -1203,9 +1204,9 @@ public class Settings extends PreferenceActivity
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
 
-        if (newConfig.uiThemeMode != mCurrentState && HeaderAdapter.mTRDSEnabler != null) {
+        if (newConfig.uiThemeMode != mCurrentState && HeaderAdapter.mThemeEnabler != null) {
             mCurrentState = newConfig.uiThemeMode;
-            HeaderAdapter.mTRDSEnabler.setSwitchState();
+            HeaderAdapter.mThemeEnabler.setSwitchState();
         }
     }
 
