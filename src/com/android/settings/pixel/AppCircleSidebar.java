@@ -37,8 +37,8 @@ import android.text.TextUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.android.settings.pixel.AppMultiSelectListPreference;
-import com.android.internal.util.pixel.DeviceUtils;
+import com.android.settings.crdroid.AppMultiSelectListPreference;
+import com.android.internal.util.crdroid.DeviceUtils;
 
 import java.util.Arrays;
 import java.util.HashSet;
