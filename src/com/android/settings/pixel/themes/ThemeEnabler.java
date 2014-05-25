@@ -26,12 +26,12 @@ import com.android.internal.util.pixel.TRDSActions;
 
 import com.android.settings.R;
 
-public class TRDSEnabler implements CompoundButton.OnCheckedChangeListener {
+public class ThemeEnabler implements CompoundButton.OnCheckedChangeListener {
     private final Context mContext;
     private Switch mSwitch;
     private boolean mStateMachineEvent;
 
-    public TRDSEnabler(Context context, Switch switch_) {
+    public ThemeEnabler(Context context, Switch switch_) {
         mContext = context;
         mSwitch = switch_;
     }

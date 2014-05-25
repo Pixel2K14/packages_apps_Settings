@@ -38,7 +38,7 @@ import android.widget.Switch;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class TRDSSettings extends SettingsPreferenceFragment {
+public class ThemeSettings extends SettingsPreferenceFragment {
 
     private static final String THEME_AUTO_MODE =
         "pref_theme_auto_mode";
@@ -52,7 +52,7 @@ public class TRDSSettings extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.trds_settings);
+        addPreferencesFromResource(R.xml.theme_settings_trds);
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
