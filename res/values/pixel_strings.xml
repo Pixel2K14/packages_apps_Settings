@@ -203,8 +203,10 @@
     <string name="clock_date_style_uppercase">Uppercase</string>
     <string name="clock_date_format_custom">Custom java format</string>
     <string name="status_bar_clock_style_reset_message">Reset clock color?</string>
-    <string name="clock_use_second">Use second clock</string>
-    <string name="clock_use_second_summary">Show second in clock</string>
+
+    <!-- Volume pane timeout -->
+    <string name="volume_panel_timeout_title">Volume panel Timeout</string>
+    <string name="volume_panel_timeout_summary">Time until the volume panel to hide</string>
   
     <!-- Lockscreen Notifications -->
     <string name="general">General</string>
