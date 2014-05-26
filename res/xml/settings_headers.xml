@@ -107,7 +107,7 @@
 
     <!-- TRDS -->
     <header
-        android:id="@+id/trds_settings"
+        android:id="@+id/theme_settings_trds"
         android:fragment="com.android.settings.pixel.themes.ThemeSettings"
         android:icon="@drawable/ic_settings_trds"
         android:title="@string/trds_settings_title" />
