@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.pixel;
+package com.android.settings.cyanogenmod;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
