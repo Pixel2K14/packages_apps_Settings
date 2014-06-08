@@ -491,8 +491,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else if (preference == mDisableNavigationKeys) {
             writeDisableNavkeysOption(getActivity(), mDisableNavigationKeys.isChecked());
             updateDisableNavkeysOption();
-<<<<<<< HEAD
-=======
             mHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -505,7 +503,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else if (preference == mHomeAnswerCall) {
             handleToggleHomeButtonAnswersCallPreferenceClick();
             return true;
->>>>>>> a607674... Settings: Move home answer & power end call options
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
