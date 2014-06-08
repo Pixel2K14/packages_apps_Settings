@@ -248,7 +248,8 @@ public class QuickSettingsUtil {
         // Don't show the CPUFreq tile if the kernel doesn't support this
         if (!QSUtils.deviceSupportsCPUFreq()) {
             removeTile(TILE_CPUFREQ);
-
+        }
+        
         // Don't show the Compass tile if the device has no orientation sensor
         if (!QSUtils.deviceSupportsCompass(context)) {
             removeTile(TILE_COMPASS);
