@@ -17,46 +17,6 @@
     <!-- Advanced settings -->
     <string name="advanced_options_settings_title">Расширенные настройки</string>
 
-    <!-- Halo -->
-    <string name="halo_settings_title">Halo</string>
-    <string name="halo_behavior_title">Поведение Halo</string>
-    <string name="halo_hide_title">Скрыть Halo после деятельности</string>
-    <string name="halo_hide_summary">Halo будет отображаться для входящих задач и скроется через некоторое время</string>
-    <string name="halo_state_title">Политика Halo</string>
-    <string name="halo_state_summary">Включает чёрный и белый списки</string>
-    <string name="halo_state_black">Чёрный список</string>
-    <string name="halo_state_white">Белый список</string>
-    <string name="halo_pause_title">Приостановить активное приложение</string>
-    <string name="halo_pause_summary">При открытии приложения из Halo, основное приложение будет приостановлено</string>
-    <string name="halo_notification_msgbox_title">Включить всплывающие уведомления</string>
-    <string name="halo_notification_msgbox_summary">Показать окно сообщения для входящих уведомлений</string>
-    <string name="halo_unlock_ping_title">Пинг при разблокировке</string>
-    <string name="halo_unlock_ping_summary">Halo пропингует, когда устройство разблокируется, если были получены новые уведомления</string>
-
-    <string name="halo_size_title">Размер Halo</string>
-    <string name="halo_size_summary">Определяет, каким большим будет Halo</string>
-    <string name="halo_size_miniscule">Миниатюрный</string>
-    <string name="halo_size_small">Маленький</string>
-    <string name="halo_size_default">Нормальный (по умолчанию)</string>
-    <string name="halo_size_large">Большой</string>
-    <string name="halo_size_gigantic">Гигантский</string>
-    <string name="halo_size_monster">Огромный</string>
-
-    <string name="halo_notification_count_title">Количество уведомлений</string>
-    <string name="halo_notification_count_summary">Показывает количество уведомлений в halo</string>
-    <string name="halo_notification_count_none">Не показывать</string>
-    <string name="halo_notification_count_total">Общее</string>
-    <string name="halo_notification_count_individual">От приложений</string>
-    <string name="halo_notification_count_both">Оба</string>
-    
-    <!-- HALO floating mode -->
-    <string name="floating_mode_title">Разрешить всплывающие окна</string>
-    <string name="floating_mode_summary">Открывать уведомления halo в режиме всплывающих окон</string>
-
-    <!-- Label for are-halo-notifications-allowed checkbox in app details [CHAR LIMIT=20] -->
-    <string name="app_halo_label_black">Черный список Halo</string>
-    <string name="app_halo_label_white">Белый список Halo</string>
-
     <!-- QS and navring Power menu -->
     <string name="title_tile_power">Меню кнопки питания</string> 
     <string name="navring_action_power_menu">Меню кнопки питания</string>

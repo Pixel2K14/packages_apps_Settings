@@ -12,46 +12,6 @@
     <!-- Advanced settings -->
     <string name="advanced_options_settings_title">Avançado</string>
 
-    <!-- Halo -->
-    <string name="halo_settings_title">Halo</string>
-    <string name="halo_behavior_title">Comportamento do Halo</string>
-    <string name="halo_hide_title">Esconder o Halo após atividade</string>
-    <string name="halo_hide_summary">Halo irá aparecer para tarefas de entrada e irá esconder-se após um tempo</string>
-    <string name="halo_state_title">Política do Halo</string>
-    <string name="halo_state_summary">Habilitar lista branca/negra para notificações</string>
-    <string name="halo_state_black">Lista negra</string>
-    <string name="halo_state_white">Lista branca</string>
-    <string name="halo_pause_title">Pausar aplicativo ativo</string>
-    <string name="halo_pause_summary">Quando abrir um aplicativo com o halo o aplicativo subjacente será pausado</string>
-    <string name="halo_notification_msgbox_title">Habilitar mensagem pop-up</string>
-    <string name="halo_notification_msgbox_summary">Mostrar caixa de mensagens para notificações de entrada</string>
-    <string name="halo_unlock_ping_title">Mostar o halo ao desbloqueio da tela</string>
-    <string name="halo_unlock_ping_summary">Halo irá mostrar-se quando o dispositivo for desbloqueado se novas notificações estiverem sido recebidas</string>
-
-    <string name="halo_size_title">Tamanho do halo</string>
-    <string name="halo_size_summary">Defina qual será o tamanho do halo</string>
-    <string name="halo_size_miniscule">Minúsculo</string>
-    <string name="halo_size_small">Pequeno</string>
-    <string name="halo_size_default">Normal</string>
-    <string name="halo_size_large">Grande</string>
-    <string name="halo_size_gigantic">Gigante</string>
-    <string name="halo_size_monster">Monstro</string>
-
-    <string name="halo_notification_count_title">Contador de notificações</string>
-    <string name="halo_notification_count_summary">Mostar contador de notificações no halo</string>
-    <string name="halo_notification_count_none">Nenhum</string>
-    <string name="halo_notification_count_total">Total</string>
-    <string name="halo_notification_count_individual">Por aplicativo</string>
-    <string name="halo_notification_count_both">Ambos</string>
-
-    <!-- HALO floating mode -->
-    <string name="floating_mode_title">Permitir janela flutuante</string>
-    <string name="floating_mode_summary">Controlar se as notificações via halo serão abertas em janela flutuante</string>
-
-    <!-- Label for are-halo-notifications-allowed checkbox in app details [CHAR LIMIT=20] -->
-    <string name="app_halo_label_black">Lista negra pelo HALO</string>
-    <string name="app_halo_label_white">Lista branca pelo HALO</string>
-
     <!-- QS and navring Power menu -->
     <string name="title_tile_power">Menu de energia</string> 
     <string name="navring_action_power_menu">Menu de energia</string>       
