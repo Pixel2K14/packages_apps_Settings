@@ -952,12 +952,6 @@
     <string name="app_moving_reboot_later_button">Reboot later</string>
 
     <!-- Quick settings panel  -->
-    <string name="title_tile_music">Music</string>
-    <string name="pref_music_mode_title">Music modes</string>
-    <string name="music_tile_mode_none">None</string>
-    <string name="music_tile_mode_background">Album artwork</string>
-    <string name="music_tile_mode_tracktitle">Track title</string>
-    <string name="music_tile_mode_all">Album artwork &amp; Track title</string>
     <string name="title_tile_quick_record">Quick Record</string>
 
 </resources>
