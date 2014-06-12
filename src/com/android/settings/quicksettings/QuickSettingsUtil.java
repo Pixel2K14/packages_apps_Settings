@@ -32,7 +32,6 @@ import static com.android.internal.util.cm.QSConstants.TILE_GPS;
 import static com.android.internal.util.cm.QSConstants.TILE_LOCKSCREEN;
 import static com.android.internal.util.cm.QSConstants.TILE_LTE;
 import static com.android.internal.util.cm.QSConstants.TILE_MOBILEDATA;
-import static com.android.internal.util.cm.QSConstants.TILE_MUSIC;
 import static com.android.internal.util.cm.QSConstants.TILE_NETWORKADB;
 import static com.android.internal.util.cm.QSConstants.TILE_NETWORKMODE;
 import static com.android.internal.util.cm.QSConstants.TILE_NFC;
@@ -164,7 +163,7 @@ public class QuickSettingsUtil {
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_NETWORKADB, R.string.title_tile_network_adb,
                 "com.android.systemui:drawable/ic_qs_network_adb_off"));
-		registerTile(new QuickSettingsUtil.TileInfo(
+	registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_POWER, R.string.title_tile_power,
                 "com.android.systemui:drawable/ic_qs_powermenu"));    
         registerTile(new QuickSettingsUtil.TileInfo(
@@ -179,9 +178,6 @@ public class QuickSettingsUtil {
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_ONTHEGO, R.string.title_tile_onthego,
                 "com.android.systemui:drawable/ic_qs_onthego"));
-        registerTile(new QuickSettingsUtil.TileInfo(
-                TILE_MUSIC, R.string.title_tile_music,
-                "com.android.systemui:drawable/ic_qs_media_play"));
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_QUICKRECORD, R.string.title_tile_quick_record,
                 "com.android.systemui:drawable/ic_qs_quickrecord"));
