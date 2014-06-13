@@ -49,7 +49,17 @@ public class QuickSettingsTilesStyle extends SettingsPreferenceFragment implemen
             prefs.removeAll();
         }
 
-is);
+        // Load the preferences from an XML resource
+        addPreferencesFromResource(R.xml.quicksettings_tiles_style);
+
+        prefs = getPreferenceScreen();
+
+	mTilesPerRow = (ListPreference) prefs.findPreference(PREF_TILES_PER_ROW);
+        int tilesPerRow = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.QUICK_TILES_PER_ROW, 3);
+        mTilesPerRow.setValue(String.valueOf(tilesPerRow));
+        mTilesPerRow.setSummary(mTilesPerRow.getEntry());
+        mTilesPerRow.setOnPreferenceChangeListener(this);
 
 	mDuplicateColumnsLandscape = (CheckBoxPreference) findPreference(PREF_TILES_PER_ROW_DUPLICATE_LANDSCAPE);
         mDuplicateColumnsLandscape.setChecked(Settings.System.getInt(
