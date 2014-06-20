@@ -50,6 +50,11 @@
          android:title="@string/notification_drawer_brightness_slider_title"
          android:defaultValue="false" />
 
+    <PreferenceScreen
+            android:key="heads_up"
+            android:fragment="com.android.settings.headsup.HeadsUpDoNotDisturbSettings"
+            android:title="@string/category_heads_up" />
+
     <PreferenceCategory
         android:title="@string/category_quick_access" >
 
