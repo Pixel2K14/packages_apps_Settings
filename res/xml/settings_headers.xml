@@ -137,7 +137,7 @@
     <header
         android:id="@+id/hover_settings"
         android:icon="@drawable/ic_settings_hover"
-        android:fragment="com.android.settings.crdroid.HoverSettings"
+        android:fragment="com.android.settings.pixel.HoverSettings"
         android:title="@string/hover_settings_title" />
 
     <!-- DEVICE -->
