@@ -21,6 +21,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Halo -->
+    <CheckBox
+        android:id="@+id/halo_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="4dip" />
+
     <!-- Peek -->
     <CheckBox
         android:id="@+id/peek_blacklist"
