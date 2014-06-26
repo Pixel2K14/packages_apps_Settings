@@ -23,10 +23,11 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+
 import com.android.settings.R;
-import android.preference.RingtonePreference;
+import com.android.settings.SettingsPreferenceFragment;
+
 import com.android.internal.util.pixel.DeviceUtils;
-import com.android.settings.cyanogenmod.SystemSettingSwitchPreference;
 
 public class NotificationDrawer extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -34,10 +35,10 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
 
     private static final String UI_COLLAPSE_BEHAVIOUR = "notification_drawer_collapse_on_dismiss";
     private static final String PRE_SMART_PULLDOWN = "smart_pulldown";
-
+    
     private ListPreference mCollapseOnDismiss;
     private ListPreference mSmartPulldown;
-
+    
     private Preference mHeadsUp;
 
     @Override
