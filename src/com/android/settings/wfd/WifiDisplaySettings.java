@@ -148,6 +148,49 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
         mEmptyView = (TextView) getView().findViewById(android.R.id.empty);
         mEmptyView.setText(R.string.wifi_display_no_devices_found);
         getListView().setEmptyView(mEmptyView);
+
+        Activity activity = getActivity();
+        // Switch
+        mActionBarSwitch = new Switch(activity);
+
+        if (activity instanceof PreferenceActivity) {
+            PreferenceActivity preferenceActivity = (PreferenceActivity) activity;
+            final int padding = activity.getResources().getDimensionPixelSize(
+                    R.dimen.action_bar_switch_padding);
+            mActionBarSwitch.setPaddingRelative(0, 0, padding, 0);
+            activity.getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM,
+                    ActionBar.DISPLAY_SHOW_CUSTOM);
+            activity.getActionBar().setCustomView(mActionBarSwitch, new ActionBar.LayoutParams(
+                    ActionBar.LayoutParams.WRAP_CONTENT,
+                    ActionBar.LayoutParams.WRAP_CONTENT,
+                    Gravity.CENTER_VERTICAL | Gravity.END));
+        }
+
+        mEnabler = new WifiDisplayEnabler(getActivity(), mActionBarSwitch);
+
+        super.onActivityCreated(savedInstanceState);
+    }
+
+    @Override
+    public void onDestroyView() {
+        getActivity().getActionBar().setCustomView(null);
+        super.onDestroyView();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (mEnabler != null) {
+            mEnabler.pause();
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mEnabler != null) {
+            mEnabler.resume();
+        }
     }
 
     @Override
