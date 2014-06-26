@@ -1,4 +1,4 @@
-package com.android.settings.pixel;
+package com.android.settings.crdroid;
 
 import android.app.Activity;
 import android.app.AlertDialog;
