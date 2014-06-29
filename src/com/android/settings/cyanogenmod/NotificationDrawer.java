@@ -27,9 +27,7 @@ import android.provider.Settings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import android.preference.RingtonePreference;
-
-import com.android.internal.util.pixel.DeviceUtils;
+import com.android.internal.util.crdroid.DeviceUtils;
 
 public class NotificationDrawer extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -40,13 +38,15 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
     
     private ListPreference mCollapseOnDismiss;
     private ListPreference mSmartPulldown;
-    private Preference mHeadsUp;
     
+    private Preference mHeadsUp;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.notification_drawer);
+        PreferenceScreen prefScreen = getPreferenceScreen();
 
         mHeadsUp = findPreference(Settings.System.HEADS_UP_NOTIFICATION);
 
@@ -71,10 +71,11 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
             updateSmartPulldownSummary(smartPulldown);
         }
     }
-    
+
     @Override
     public void onResume() {
         super.onResume();
+
         boolean headsUpEnabled = Settings.System.getInt(
                 getContentResolver(), Settings.System.HEADS_UP_NOTIFICATION, 0) == 1;
         mHeadsUp.setSummary(headsUpEnabled
