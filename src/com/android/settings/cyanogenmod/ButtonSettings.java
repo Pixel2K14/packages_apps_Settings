@@ -211,7 +211,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         // Only visible on devices that does not have a navigation bar already,
         // and don't even try unless the existing keys can be disabled
         /*boolean needsNavigationBar = false;
-        if (isKeyDisablerSupported()) {
+        if (KeyDisabler.isSupported()) {
             try {
                 IWindowManager wm = WindowManagerGlobal.getWindowManagerService();
                 needsNavigationBar = wm.needsNavigationBar();
